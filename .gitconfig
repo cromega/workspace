@@ -1,0 +1,15 @@
+[user]
+  email = crome@moronia.hu
+  name = Bence Monus
+
+[push]
+  default = matching
+
+[color]
+  ui = auto
+
+[alias]
+  c = commit
+  co = checkout
+  st = status
+

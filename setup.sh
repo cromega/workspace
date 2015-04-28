@@ -12,7 +12,8 @@ die_if_no_git() {
 }
 
 [ ! -L ~/.vimrc ] && ln -s .vim/.vimrc ~/.vimrc
-[ ! -f ~/.tmux.conf ] && cp .tmux.conf ~
+
+for file in .tmux.conf .gitconfig; do [ ! -f $file ] && cp $file ~; done
 
 [ ! zsh ] && echo ********************** INSTALL ZSH! *************************
 if [ ! -d ~/.oh-my-zsh ]; then
