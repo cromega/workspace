@@ -5,8 +5,8 @@ die() {
   exit 1
 }
 
-[ "zsh --version" ] || die "zsh not found, go get some"
-[ "git" ] || die "git not found, go get some"
+command -v zsh || die "zsh not found, go get some"
+command -v git || die "git not found, go get some"
 
 if [ ! -L ~/.vimrc -a ! -f ~/.vimrc -a ! -d ~/.vim ]; then
   echo "vim stuff is sub-par, fixing..."
