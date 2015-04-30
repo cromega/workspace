@@ -9,8 +9,11 @@ command -v zsh || die "zsh not found, go get some"
 command -v git || die "git not found, go get some"
 
 if [ ! -d ~/.vim ]; then
-  cp -r .vim ~ && ln -s ~/.vim/.vimrc ~/.vimrc
-  echo "vim is sorta fixed"
+  mkdir -p ~/.vim/bundle/Vundle.vim
+  git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  cp .vimrc ~/.vim
+  ln -s ~/.vim/.vimrc ~
+  echo "vim is sorta fixed. Run BundleInstall"
 fi
 
 for file in .tmux.conf .gitconfig; do
