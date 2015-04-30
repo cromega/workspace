@@ -15,9 +15,8 @@ if [ ! -L ~/.vimrc -a ! -f ~/.vimrc -a ! -d ~/.vim ]; then
 fi
 
 for file in .tmux.conf .gitconfig; do
-  if [ ! -f $file ]; then
-    cp $file ~
-    echo "placed $file where it belongs"
+  if [ ! -f ~/$file ]; then
+    cp -v $file ~
   fi
 done
 
