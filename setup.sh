@@ -8,8 +8,7 @@ die() {
 command -v zsh || die "zsh not found, go get some"
 command -v git || die "git not found, go get some"
 
-if [ ! -L ~/.vimrc -a ! -f ~/.vimrc -a ! -d ~/.vim ]; then
-  echo "vim stuff is sub-par, fixing..."
+if [ ! -d ~/.vim ]; then
   cp -r .vim ~ && ln -s ~/.vim/.vimrc ~/.vimrc
   echo "vim is sorta fixed"
 fi
