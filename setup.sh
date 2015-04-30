@@ -25,11 +25,15 @@ for file in .tmux.conf .gitconfig; do
   fi
 done
 
-[ ! zsh ] && stupid_message "ZSH EATH BASH FOR BREAKFAST, GO GET SOME"
 if [ ! -d ~/.oh-my-zsh ]; then
   die_if_no_git
   wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
-  echo 'got zsh now!'
+
+  if [ ! zsh --version ]; then
+    stupid_message "ZSH EATS BASH FOR BREAKFAST, GO GET SOME"
+  else
+    chsh -s /usr/bin/zsh
+  fi
 fi
 
 if [ ! rbenv ]; then
