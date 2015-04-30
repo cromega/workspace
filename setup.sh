@@ -26,7 +26,7 @@ if [ ! -d ~/.oh-my-zsh ]; then
   wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
 fi
 
-if [ ! rbenv ]; then
+if [ ! -d ~/.rbenv ]; then
   git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
   git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
   echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.oh-my-zsh/custom/rbenv.zsh
