@@ -33,10 +33,10 @@ check_command zsh
 if [ ! -d ~/.vim ]; then
   mkdir -p ~/.vim/bundle/Vundle.vim
   git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-  file .vimrc ~/.vim/
   ln -s ~/.vim/.vimrc ~
   echo "vim is sorta fixed. Run BundleInstall"
 fi
+file .vimrc ~/.vim/
 
 if [ ! -d ~/.oh-my-zsh ]; then
   wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
@@ -45,9 +45,9 @@ fi
 if [ ! -d ~/.rbenv ]; then
   git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
   git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-  file rbenv.zsh ~/.oh-my-zsh/custom/
   echo "got rbenv now!"
 fi
+file rbenv.zsh ~/.oh-my-zsh/custom/
 
 file .tmux.conf ~
 file .gitconfig ~
