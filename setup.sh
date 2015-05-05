@@ -48,6 +48,13 @@ if [ ! -d ~/.rbenv ]; then
   git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
   git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
   echo "got rbenv now!"
+else
+  pushd ~/.rbenv
+  git fetch && git merge origin/master
+  popd
+  pushd ~/.rbenv/plugins/ruby-build
+  git fetch && git merge origin/master
+  popd
 fi
 file rbenv.zsh ~/.oh-my-zsh/custom/
 
