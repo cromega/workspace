@@ -38,10 +38,6 @@ if [ ! -d ~/.vim ]; then
   echo "vim is sorta fixed. Run BundleInstall"
 fi
 
-for file in .tmux.conf .gitconfig; do
-  file "$file" ~
-done
-
 if [ ! -d ~/.oh-my-zsh ]; then
   wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
 fi
@@ -52,3 +48,7 @@ if [ ! -d ~/.rbenv ]; then
   file rbenv.zsh ~/.oh-my-zsh/custom/
   echo "got rbenv now!"
 fi
+
+file .tmux.conf ~
+file .gitconfig ~
+
