@@ -31,9 +31,11 @@ check_command git
 check_command zsh
 
 if [ ! -d ~/.vim ]; then
+  set -e
   mkdir -p ~/.vim/bundle/Vundle.vim
   git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   ln -s ~/.vim/.vimrc ~
+  set +e
   echo "vim is sorta fixed. Run BundleInstall"
 fi
 file .vimrc ~/.vim/
