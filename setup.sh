@@ -5,8 +5,6 @@ die() {
   exit 1
 }
 
-command -v zsh || die "zsh not found, go get some"
-command -v git || die "git not found, go get some"
 file() {
   file="$1"
   path="$2"
@@ -25,6 +23,8 @@ file() {
   fi
 }
 
+command -v zsh 2>&1 > /dev/null || die "zsh not found, go get some"
+command -v git 2>&1 > /dev/null || die "git not found, go get some"
 
 if [ ! -d ~/.vim ]; then
   mkdir -p ~/.vim/bundle/Vundle.vim
