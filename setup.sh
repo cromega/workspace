@@ -23,8 +23,12 @@ file() {
   fi
 }
 
-command -v zsh 2>&1 > /dev/null || die "zsh not found, go get some"
-command -v git 2>&1 > /dev/null || die "git not found, go get some"
+check_command() {
+  command -v "$1" 2>&1 > /dev/null || die "$1 not found"
+}
+
+check_command git
+check_command zsh
 
 if [ ! -d ~/.vim ]; then
   mkdir -p ~/.vim/bundle/Vundle.vim
