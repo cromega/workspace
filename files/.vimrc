@@ -28,7 +28,6 @@ set sw=2
 set expandtab
 set ai
 set nu
-"set rnu
 set ruler
 set lbr
 set hidden
@@ -43,14 +42,13 @@ set noswapfile
 let mapleader = ","
 
 set background=dark
-"colorscheme grb256
 
 set wildmenu
 set wildmode=longest:full,full
 
 set viminfo='10,\"100,:20,%,n~/.viminfo
 
-" remember cursos position
+"remember cursor position
 function! ResCur()
   if line("'\"") <= line("$")
     normal! g`"
@@ -63,23 +61,12 @@ augroup resCur
   autocmd BufWinEnter * call ResCur()
 augroup END
 
-function! ToggleNumbering()
-  if(&relativenumber == 1 || &number == 1)
-    set nonu
-    set nornu
-  else
-    set nu
-    set rnu
-  end
-endfunc
-
-nnoremap l :call ToggleNumbering()<cr>
+nnoremap l :set nu!<cr>
 nnoremap <c-f> :Ag<cr>
-nnoremap <c-m> :NERDTreeToggle<cr>
-nnoremap <c-l> :bn<cr>
-nnoremap <c-j> :bp<cr>
-:nnoremap ≈ :call nerdtree#invokeKeyMap("o")<CR>
-
+nnoremap <c-\> :NERDTreeToggle<cr>
+nnoremap <c-n> :bn<cr>
+nnoremap <c-p> :bp<cr>
+map <leader>/ <plug>NERDCommenterToggle
 
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
@@ -89,4 +76,3 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 let g:airline#extensions#tabline#enabled = 1
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 
-map <leader>/ <plug>NERDCommenterToggle
