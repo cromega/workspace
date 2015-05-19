@@ -1,6 +1,7 @@
 alias viber=/opt/viber/Viber
 alias rsync="rsync -avz --progress"
 alias webserve="python3 -m http.server"
+alias mc="mc -b"
 
 alias be="bundle exec"
 
