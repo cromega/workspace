@@ -73,5 +73,7 @@ if [ ! -d ~/go/$go_version ]; then
 fi
 file go.zsh ~/.oh-my-zsh/custom/
 
+file crap.zsh ~/.oh-my-zsh/custom/
+
 file .tmux.conf ~
 file .gitconfig ~
