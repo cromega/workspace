@@ -7,6 +7,7 @@ alias be="bundle exec"
 
 export EDITOR=/usr/bin/vim
 export LC_ALL=en_US.utf8
+export TERM=xterm-256color
 
 k() {
   if [ -z "$1" ]; then
