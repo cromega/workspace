@@ -52,15 +52,9 @@ check_command() {
 check_command git
 check_command zsh
 
-if [ ! -d ~/.vim ]; then
-  set -e
-  mkdir -p ~/.vim/bundle/Vundle.vim
-  git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-  ln -s ~/.vim/.vimrc ~
-  set +e
-  echo "vim is sorta fixed. Run BundleInstall"
-fi
+github gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
 file .vimrc ~/.vim/
+ln -s ~/.vim/.vimrc ~
 
 if [ ! -d ~/.oh-my-zsh ]; then
   wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
