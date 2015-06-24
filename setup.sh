@@ -60,18 +60,8 @@ if [ ! -d ~/.oh-my-zsh ]; then
   wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
 fi
 
-if [ ! -d ~/.rbenv ]; then
-  git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-  git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-  echo "got rbenv now!"
-else
-  pushd ~/.rbenv
-  git fetch && git merge origin/master
-  popd
-  pushd ~/.rbenv/plugins/ruby-build
-  git fetch && git merge origin/master
-  popd
-fi
+github sstephenson/rbenv ~/.rbenv
+github sstephenson/ruby-build ~/.rbenv/plugins/ruby-build
 file rbenv.zsh ~/.oh-my-zsh/custom/
 
 go_version="1.4.2"
