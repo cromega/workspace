@@ -23,6 +23,28 @@ file() {
   fi
 }
 
+git_clone() {
+  mkdir -p "$2"
+  git clone $1 "$2"
+}
+
+git_pull() {
+  pushd "$1"
+  git fetch && git merge origin/master
+  popd
+}
+
+github() {
+  repo="$1"
+  path="$2"
+  url="https://github.com/${1}.git"
+  if [ -d "$path" ]; then
+    git_pull "$2"
+  else
+    git_clone "$1" "$2"
+  fi
+}
+
 check_command() {
   command -v "$1" 2>&1 > /dev/null || die "$1 not found"
 }
