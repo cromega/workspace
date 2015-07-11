@@ -15,3 +15,4 @@ else
   export TERM="xterm-256color"
 fi
 
+unsetopt autocd
