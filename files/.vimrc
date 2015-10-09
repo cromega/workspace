@@ -42,6 +42,7 @@ set noswapfile
 let mapleader = ","
 
 set background=dark
+set colorscheme onedark
 
 set wildmenu
 set wildmode=longest:full,full
@@ -76,3 +77,7 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 let g:airline#extensions#tabline#enabled = 1
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 
+let NERDTreeShowHidden=1
+
+autocmd BufWritePre * :%s/\s\+$//e
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
