@@ -42,7 +42,7 @@ set noswapfile
 let mapleader = ","
 
 set background=dark
-set colorscheme onedark
+colorscheme onedark
 
 set wildmenu
 set wildmode=longest:full,full
@@ -69,7 +69,7 @@ nnoremap <c-n> :bn<cr>
 nnoremap <c-p> :bp<cr>
 map <leader>/ <plug>NERDCommenterToggle
 
-autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 0
 autocmd Filetype gitcommit setlocal spell textwidth=72

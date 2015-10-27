@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 die() {
   echo $1
@@ -55,6 +55,7 @@ check_command zsh
 github gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
 file .vimrc ~/.vim/
 ln -s ~/.vim/.vimrc ~
+file onedark.vim ~/.vim/colors/
 
 if [ ! -d ~/.oh-my-zsh ]; then
   wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
