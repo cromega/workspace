@@ -73,9 +73,6 @@ if [ ! -d ~/go/$go_version ]; then
   set -e
   wget https://storage.googleapis.com/golang/go${go_version}.linux-amd64.tar.gz -O - | tar -xzf - -C ~/go
   mv ~/go/go ~/go/$go_version
-  pushd ~/go/$go_version/src
-  ./make.bash
-  popd
   [ -L ~/go/current ] && rm ~/go/current
   ln -s ~/go/$go_version ~/go/current
   set +e
