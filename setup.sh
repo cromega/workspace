@@ -1,4 +1,6 @@
-#!/bin/bash -x
+#!/bin/bash
+
+[ ! -z $DEBUG ] && set -x
 
 die() {
   echo $1
