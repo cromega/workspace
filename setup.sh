@@ -11,18 +11,9 @@ file() {
   file="$1"
   path="$2"
 
-  if [ ! -f "$path/$file" ]; then
-    mkdir -p "$path"
-    cp "files/$file" "$path"
-    echo "created $path/$file"
-  else
-    current_hash=$(sha1sum "$path/$file" | awk '{print $1}')
-    new_hash=$(sha1sum "files/$file" | awk '{print $1}')
-    if [ $current_hash != $new_hash ]; then
-      cp "files/$file" "$path"
-      echo "updated $path/$file"
-    fi
-  fi
+  mkdir -p "$path"
+  cp "files/$file" "$path"
+  echo "$path/$file written."
 }
 
 git_clone() {
