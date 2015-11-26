@@ -39,11 +39,12 @@ git_pull() {
 github() {
   repo="$1"
   path="$2"
-  url="https://github.com/${1}.git"
+
+  url="https://github.com/${repo}.git"
   if [ -d "$path" ]; then
-    git_pull "$2"
+    git_pull "$path"
   else
-    git_clone "$1" "$2"
+    git_clone "$repo" "$path"
   fi
 }
 
