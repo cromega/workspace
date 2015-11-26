@@ -62,7 +62,7 @@ augroup resCur
   autocmd BufWinEnter * call ResCur()
 augroup END
 
-nnoremap l :set nu!<cr>
+nnoremap <c-l> :set nu!<cr>
 nnoremap <c-f> :Ag<cr>
 nnoremap <c-\> :NERDTreeToggle<cr>
 nnoremap <c-n> :bn<cr>
