@@ -57,10 +57,10 @@ function! ResCur()
   endif
 endfunction
 
-augroup resCur
-  autocmd!
-  autocmd BufWinEnter * call ResCur()
-augroup END
+"augroup resCur
+  "autocmd!
+  "autocmd BufWinEnter * call ResCur()
+"augroup END
 
 nnoremap <c-l> :set nu!<cr>
 nnoremap <c-f> :Ag<cr>
