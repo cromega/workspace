@@ -1,3 +1,3 @@
-export GOROOT="/home/crome/go/current"
-export GOPATH="/home/crome/code/go"
+export GOROOT="${HOME}/go/current"
+export GOPATH="${HOME}/code/go"
 export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
