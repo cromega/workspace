@@ -18,7 +18,7 @@ file() {
 
 git_clone() {
   mkdir -p "$2"
-  git clone $1 "$2"
+  git clone "$1" "$2"
 }
 
 git_pull() {
@@ -35,7 +35,7 @@ github() {
   if [ -d "$path" ]; then
     git_pull "$path"
   else
-    git_clone "$repo" "$path"
+    git_clone "$url" "$path"
   fi
 }
 
