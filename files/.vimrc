@@ -81,3 +81,5 @@ let NERDTreeShowHidden=1
 
 autocmd BufWritePre * :%s/\s\+$//e
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'ruby', 'go', 'c', 'css']
