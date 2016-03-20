@@ -22,9 +22,7 @@ git_clone() {
 }
 
 git_pull() {
-  pushd "$1"
-  git fetch && git merge origin/master
-  popd
+  git -C "$1" fetch && git -C "$1" merge origin/master
 }
 
 github() {
