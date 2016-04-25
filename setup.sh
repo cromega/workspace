@@ -46,7 +46,7 @@ check_command zsh
 
 github gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
 file .vimrc ~/.vim/
-ln -s ~/.vim/.vimrc ~
+[ ! -L ~/.vimrc ] && ln -s ~/.vim/.vimrc ~
 file onedark.vim ~/.vim/colors/
 
 if [ ! -d ~/.oh-my-zsh ]; then
