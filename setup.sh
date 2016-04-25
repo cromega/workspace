@@ -57,7 +57,7 @@ github sstephenson/rbenv ~/.rbenv
 github sstephenson/ruby-build ~/.rbenv/plugins/ruby-build
 file rbenv.zsh ~/.oh-my-zsh/custom/
 
-go_version="1.6.1"
+go_version="1.6.2"
 os=$(uname -s | tr 'A-Z' 'a-z')
 mkdir -p ~/go
 if [ ! -d ~/go/$go_version ]; then
