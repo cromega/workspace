@@ -18,4 +18,3 @@ fi
 
 unsetopt autocd
 
-eval $(ssh-agent) > /dev/null
