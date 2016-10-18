@@ -6,6 +6,7 @@ alias mc="mc -b"
 alias ta="tmux attach -d"
 
 alias be="bundle exec"
+alias xopen="xdg-open"
 
 export EDITOR=/usr/bin/vim
 export LC_ALL=en_US.utf8
