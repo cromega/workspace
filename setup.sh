@@ -11,7 +11,8 @@ git-config
 go
 rbenv
 tmux-config
-vim"
+vim
+shell_colours"
 
 if [ $# -eq 0 ]; then
   for module in $default; do
