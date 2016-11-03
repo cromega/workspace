@@ -73,6 +73,7 @@ autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 0
 autocmd Filetype gitcommit setlocal spell textwidth=72
+autocmd FileType yaml setl indentkeys-=<:>
 
 let g:airline#extensions#tabline#enabled = 1
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
