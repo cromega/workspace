@@ -6,3 +6,5 @@ if [ ! -d ~/.oh-my-zsh ]; then
 fi
 
 put crap.zsh ~/.oh-my-zsh/custom/
+put docker.zsh ~/.oh-my-zsh/custom/
+put pivotal.zsh ~/.oh-my-zsh/custom/
