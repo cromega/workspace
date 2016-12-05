@@ -1,0 +1,22 @@
+[global_config]
+[keybindings]
+  edit_window_title = None
+  go_prev = <Alt>bracketleft
+  go_right = <Alt>bracketright
+  new_tab = <Alt>t
+  next_tab = <Shift>Right
+  prev_tab = <Shift>Left
+  split_horiz = <Shift><Alt>d
+  split_vert = <Alt>d
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_image = None
