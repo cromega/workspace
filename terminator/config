@@ -1,8 +1,8 @@
 [global_config]
 [keybindings]
   edit_window_title = None
+  go_next = <Alt>bracketright
   go_prev = <Alt>bracketleft
-  go_right = <Alt>bracketright
   new_tab = <Alt>t
   next_tab = <Shift>Right
   prev_tab = <Shift>Left
