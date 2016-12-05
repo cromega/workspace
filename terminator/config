@@ -20,3 +20,4 @@
 [profiles]
   [[default]]
     background_image = None
+    scrollback_infinite = True
