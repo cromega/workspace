@@ -38,6 +38,7 @@ set pastetoggle=<F2>
 set backspace=2
 set laststatus=2
 set noswapfile
+set colorcolumn=100
 
 let mapleader = ","
 
