@@ -3,9 +3,6 @@
 
 [ ! -z $DEBUG ] && set -x
 
-check_command git
-check_command zsh
-
 default="oh-my-zsh
 git-config
 go
