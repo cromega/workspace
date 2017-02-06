@@ -9,7 +9,8 @@ go
 rbenv
 tmux-config
 vim
-shell_colours"
+shell_colours
+htop"
 
 if [ $# -eq 0 ]; then
   for module in $default; do
