@@ -68,7 +68,10 @@ nnoremap <c-f> :Ag<cr>
 nnoremap <c-\> :NERDTreeToggle<cr>
 nnoremap <c-n> :bn<cr>
 nnoremap <c-p> :bp<cr>
+nnoremap <c-y> :%w !xclip -selection clipboard<cr><cr>
+vnoremap <c-y> :'<,'>w !xclip -selection clipboard<cr><cr>
 map <c-_> <plug>NERDCommenterToggle
+
 
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
