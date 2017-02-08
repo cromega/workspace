@@ -84,7 +84,10 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-stand
 
 let NERDTreeShowHidden=1
 
-autocmd BufWritePre * :%s/\s\+$//e
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'ruby', 'go', 'c', 'css']
+
+"mark before removing trailing whitespace on save to prevent jumping in file
+command! -range=% TR mark `|execute <line1> . ',' . <line2> . 's/\s\+$//'|normal! ``
+autocmd BufWritePre * :mark `|%s/\s\+$//e|normal! ``
