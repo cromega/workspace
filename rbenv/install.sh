@@ -4,4 +4,5 @@ cd $(dirname $0)
 github sstephenson/rbenv ~/.rbenv
 github sstephenson/ruby-build ~/.rbenv/plugins/ruby-build
 put rbenv.zsh ~/.oh-my-zsh/custom/
+put .gemrc ~
 
