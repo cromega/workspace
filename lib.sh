@@ -41,6 +41,6 @@ github() {
 }
 
 check_command() {
-  command -v "$1" 2>&1 > /dev/null || die "$1 not found"
+  command -v "$1" 2>&1 > /dev/null
 }
 
