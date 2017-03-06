@@ -13,12 +13,19 @@ put() {
 }
 
 git_clone() {
+  repo="$1"
+  path="$2"
+
+  echo "cloning $1 into $2"
   mkdir -p "$2"
   git clone "$1" "$2"
 }
 
 git_pull() {
-  git -C "$1" fetch && git -C "$1" merge origin/master
+  path="$1"
+
+  echo "updating repo in $path"
+  git -C "$path" fetch && git -C "$path" merge origin/master
 }
 
 github() {
