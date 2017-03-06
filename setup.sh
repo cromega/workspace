@@ -12,15 +12,22 @@ vim
 shell_colours
 htop"
 
+install_module() {
+  module=$1
+  echo "=== installing $module..."
+  bash -e $module/install.sh
+  echo "=== done."
+  echo -e "\n"
+}
+
+
 if [ $# -eq 0 ]; then
   for module in $default; do
-    echo "installing $module..."
-    bash $module/install.sh
+    install_module "$module"
   done
 else
   for module in $@; do
-    echo "installing $module..."
-    bash $module/install.sh
+    install_module "$module"
   done
 fi
 
