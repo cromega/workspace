@@ -1,7 +1,7 @@
 cd $(dirname $0)
 . ../lib.sh
 
-go_version="1.7.5"
+go_version="1.8"
 os=$(uname -s | tr 'A-Z' 'a-z')
 mkdir -p ~/go
 if [ ! -d ~/go/$go_version ]; then
