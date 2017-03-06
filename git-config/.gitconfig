@@ -3,7 +3,7 @@
   name = Bence Monus
 
 [push]
-  default = simple
+  default = simple # push to current tracking branch if the names match
 
 [color]
   ui = auto
