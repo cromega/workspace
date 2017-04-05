@@ -9,6 +9,8 @@ if [ ! -x /usr/bin/zsh ]; then
   echo "*** WARN: zsh is not installed"
 fi
 
-for file in files/*; do
+for file in custom/*; do
   put "$file" ~/.oh-my-zsh/custom
 done
+
+put themes/crome.zsh-theme ~/.oh-my-zsh/themes
