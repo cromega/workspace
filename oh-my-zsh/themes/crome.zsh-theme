@@ -1,4 +1,4 @@
-local hname="$(hostname | tr -d "aoieu")"
+local hname="$(hostname | tr "[:upper:]" "[:lower:]" | tr -d "aoieu")"
 local ret_status="%(?:%{$fg_bold[green]%}%{$hname%} :%{$fg_bold[red]%}%{$hname%} )"
 PROMPT='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
 
