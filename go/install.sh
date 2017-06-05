@@ -1,7 +1,7 @@
 cd $(dirname $0)
 . ../lib.sh
 
-go_version="1.8"
+go_version="1.8.3"
 os=$(uname -s | tr 'A-Z' 'a-z')
 
 mkdir -p ~/go
