@@ -7,6 +7,7 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim' "required
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-endwise'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
