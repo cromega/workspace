@@ -1,3 +1,5 @@
+[ -S /var/run/user/$UID/keyring/ssh ] && return
+
 pid=$(pidof ssh-agent)
 
 if [ $? -eq 0 ]; then
