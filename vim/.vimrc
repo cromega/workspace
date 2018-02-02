@@ -18,6 +18,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'fatih/vim-go'
 Plugin 'bling/vim-airline'
 Plugin 'hashivim/vim-terraform'
+Plugin 'martin-svk/vim-yaml'
 
 call vundle#end() "required
 filetype plugin indent on "required
