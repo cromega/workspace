@@ -18,3 +18,5 @@
 
 [core]
   pager = "less -FRX"
+[fetch]
+	recurseSubmodules = yes
