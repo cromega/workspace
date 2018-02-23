@@ -13,7 +13,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
-Plugin 'rking/ag.vim'
+Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-rails'
 Plugin 'fatih/vim-go'
 Plugin 'bling/vim-airline'
@@ -96,3 +96,5 @@ let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'ruby', 'go', 'c
 "mark before removing trailing whitespace on save to prevent jumping in file
 command! -range=% TR mark `|execute <line1> . ',' . <line2> . 's/\s\+$//'|normal! ``
 autocmd BufWritePre * :mark `|%s/\s\+$//e|normal! ``
+
+let g:ackprg = 'ag --vimgrep'
