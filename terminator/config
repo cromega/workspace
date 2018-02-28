@@ -8,6 +8,7 @@
   prev_tab = <Shift>Left
   split_horiz = <Shift><Alt>d
   split_vert = <Alt>d
+  zoom_in = <Primary>equal
 [layouts]
   [[default]]
     [[[child1]]]
