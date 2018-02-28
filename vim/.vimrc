@@ -67,7 +67,7 @@ endfunction
 "augroup END
 
 nnoremap <c-l> :set nu!<cr>
-nnoremap <c-f> :Ag<cr>
+nnoremap <c-f> :Ack<cr>
 nnoremap <c-\> :NERDTreeToggle<cr>
 nnoremap <c-n> :bn<cr>
 nnoremap <c-p> :bp<cr>
