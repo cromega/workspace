@@ -10,7 +10,7 @@ cleanup() {
 
 trap "cleanup" EXIT
 
-sudo apt-get install automake libtool python squash-tools
+sudo apt-get install automake libtool python squashfs-tools libarchive-dev
 
 github singularityware/singularity $tmpdir
 cd $tmpdir
