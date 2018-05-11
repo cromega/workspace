@@ -7,3 +7,4 @@ put .vimrc ~/.vim
 [ ! -L ~/.vimrc ] && ln -s ~/.vim/.vimrc ~
 
 put onedark.vim ~/.vim/colors
+vim +VundleUpdate +qall
