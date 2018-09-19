@@ -1,4 +1,4 @@
-source utils.zsh
+source ${0:a:h}/utils.zsh
 
 loadrbenv() {
   export PATH="${HOME}/.rbenv/bin:$PATH"

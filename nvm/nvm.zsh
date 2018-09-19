@@ -1,4 +1,4 @@
-source utils.zsh
+source ${0:a:h}/utils.zsh
 
 loadnvm() {
   export NVM_DIR=$HOME/.nvm
