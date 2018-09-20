@@ -5,6 +5,6 @@ loadnvm() {
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 }
 
-fakeonce nvm loadnvm
-fakeonce node loadnvm
-fakeonce npm loadnvm
+stubonce nvm loadnvm
+stubonce node loadnvm
+stubonce npm loadnvm

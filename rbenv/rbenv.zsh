@@ -7,6 +7,6 @@ loadrbenv() {
   eval "$(rbenv init -)"
 }
 
-fakeonce rbenv loadrbenv
-fakeonce ruby loadrbenv
-fakeonce bundle loadrbenv
+stubonce rbenv loadrbenv
+stubonce ruby loadrbenv
+stubonce bundle loadrbenv
