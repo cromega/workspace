@@ -9,4 +9,4 @@ loadrbenv() {
 
 fakeonce rbenv loadrbenv
 fakeonce ruby loadrbenv
-
+fakeonce bundle loadrbenv
