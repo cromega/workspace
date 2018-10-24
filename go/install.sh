@@ -1,7 +1,7 @@
 cd $(dirname $0)
 . ../lib.sh
 
-go_version="1.10"
+go_version="1.11.1"
 os=$(uname -s | tr 'A-Z' 'a-z')
 
 mkdir -p ~/go
