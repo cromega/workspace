@@ -3,3 +3,4 @@ list_docker_ips() {
 }
 
 alias doc="docker-compose"
+alias alpine="docker run --rm -it alpine:latest ash -c \"apk update; ash\""
