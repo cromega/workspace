@@ -2,15 +2,22 @@ cd $(dirname $0)
 . ../lib.sh
 
 if [ ! -d ~/.oh-my-zsh ]; then
-  wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
+  umask g-w,o-w
+  github robbyrussell/oh-my-zsh ~/.oh-my-zsh
 fi
 
 if [ ! -x /usr/bin/zsh ]; then
-  echo "*** WARN: zsh is not installed"
+  if check_command "apt-get"; then
+    sudo apt-get -y install zsh
+  else
+    echo "*** WARN: zsh is not installed"
+  fi
 fi
 
 for file in custom/*; do
   put "$file" ~/.oh-my-zsh/custom
 done
 
-put themes/crome.zsh-theme ~/.oh-my-zsh/themes
+put themes/cromega.zsh-theme ~/.oh-my-zsh/themes
+put .zshrc ~
+
