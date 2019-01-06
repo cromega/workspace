@@ -3,6 +3,11 @@
 
 [ ! -z $DEBUG ] && set -x
 
+if ! check_command "git"; then
+  echo "Need to install git"
+  sudo apt-get -y install git
+fi
+
 default="oh-my-zsh
 git-config
 go
