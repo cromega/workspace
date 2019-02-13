@@ -20,3 +20,7 @@
   pager = "less -FRX"
 [fetch]
 	recurseSubmodules = yes
+
+[include]
+  path = .gitconfig.clients
+
