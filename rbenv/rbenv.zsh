@@ -10,3 +10,4 @@ loadrbenv() {
 stubonce rbenv loadrbenv
 stubonce ruby loadrbenv
 stubonce bundle loadrbenv
+stubonce irb loadrbenv
