@@ -20,3 +20,5 @@ fi
 unsetopt autocd
 
 alias shrug='echo ¯\\_\(ツ\)_/¯'
+
+unalias g
