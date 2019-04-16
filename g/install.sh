@@ -4,6 +4,6 @@ cd $(dirname $0)
 curl https://raw.githubusercontent.com/stefanmaric/g/master/bin/g > ~/bin/g
 chmod +x ~/bin/g
 
-put g.zsh ~/.oh-my-zsh/crap/
+put g.zsh ~/.oh-my-zsh/custom/
 
 

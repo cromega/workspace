@@ -1,6 +1,10 @@
 #!/bin/bash -e
 . lib.sh
 
+create_required_folders() {
+  mkdir -p ~/bin
+}
+
 [ ! -z $DEBUG ] && set -x
 
 if ! check_command "git"; then
@@ -25,6 +29,7 @@ install_module() {
   echo -e "\n"
 }
 
+create_required_folders
 
 if [ $# -eq 0 ]; then
   for module in $default; do
