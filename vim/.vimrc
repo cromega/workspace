@@ -89,8 +89,11 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-stand
 
 let NERDTreeShowHidden=1
 
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"force file types
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd BufNewFile,BufReadPost *.ts set filetype=javascript
+
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'ruby', 'go', 'c', 'css']
 
 "mark before removing trailing whitespace on save to prevent jumping in file
