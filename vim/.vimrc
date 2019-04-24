@@ -101,3 +101,5 @@ command! -range=% TR mark `|execute <line1> . ',' . <line2> . 's/\s\+$//'|normal
 autocmd BufWritePre * :mark `|%s/\s\+$//e|normal! ``
 
 let g:ackprg = 'ag --vimgrep'
+
+match Todo '\v^(\<|\=|\>){7}([^=].+)?$'

@@ -175,7 +175,7 @@ call s:h("Debug", {}) " debugging statements
 call s:h("Underlined", {}) " text that stands out, HTML links
 call s:h("Ignore", {}) " left blank, hidden
 call s:h("Error", { "fg": s:red }) " any erroneous construct
-call s:h("Todo", { "fg": s:purple }) " anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+call s:h("Todo", { "fg": s:purple, "bg": s:yellow }) " anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
 " +----------------------------------------------------------------------+
 " | Highlighting Groups (descriptions and ordering from `:h hitest.vim`) |
