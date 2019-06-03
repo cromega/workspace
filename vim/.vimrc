@@ -42,6 +42,8 @@ set backspace=2
 set laststatus=2
 set noswapfile
 set colorcolumn=100
+set updatetime=500
+set autoread
 
 let mapleader = ","
 
@@ -99,6 +101,9 @@ let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'ruby', 'go', 'c
 "mark before removing trailing whitespace on save to prevent jumping in file
 command! -range=% TR mark `|execute <line1> . ',' . <line2> . 's/\s\+$//'|normal! ``
 autocmd BufWritePre * :mark `|%s/\s\+$//e|normal! ``
+
+"check buffer for external changes
+au CursorHold,CursorHoldI,FocusGained,BufEnter * checktime
 
 let g:ackprg = 'ag --vimgrep'
 
