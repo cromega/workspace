@@ -20,9 +20,9 @@
 [plugins]
 [profiles]
   [[default]]
-    background_darkness = 0.9
+    background_darkness = 0.85
     background_type = transparent
     cursor_color = "#aaaaaa"
     font = Sans 10
+    foreground_color = "#dadada"
     scrollback_infinite = True
-    use_theme_colors = True
