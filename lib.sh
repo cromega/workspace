@@ -3,6 +3,10 @@ die() {
   exit 1
 }
 
+prepare_environment() {
+  mkdir -p ~/bin
+}
+
 put() {
   file="$1"
   path="$2"
