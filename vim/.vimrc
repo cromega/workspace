@@ -47,7 +47,16 @@ set autoread
 
 let mapleader = ","
 
-set background=dark
+if (has("autocmd") && !has("gui_running"))
+  augroup colorset
+    autocmd!
+    let s:white = { "gui": "#ABB2BF", "cterm": "253", "cterm16" : "7" }
+    let s:comment_grey = { "gui": "#ABB2BF", "cterm": "246", "cterm16" : "7" }
+    autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white })
+    autocmd ColorScheme * call onedark#set_highlight("Comment", { "fg": s:comment_grey })
+    autocmd ColorScheme * call onedark#set_highlight("gitcommitComment", { "fg": s:comment_grey })
+  augroup END
+endif
 colorscheme onedark
 
 set wildmenu
