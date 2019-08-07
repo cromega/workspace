@@ -12,6 +12,15 @@ put() {
   echo "$path/$file written."
 }
 
+symlink() {
+  local src="$1"
+  local dst="$2"
+
+  [ -L "$dst" ] && rm "$dst"
+  ln -s "$src" "$dst"
+  echo "symlink created $src -> $dst"
+}
+
 git_clone() {
   repo="$1"
   path="$2"

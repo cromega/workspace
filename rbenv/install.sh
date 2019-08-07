@@ -7,7 +7,7 @@ github sstephenson/rbenv ~/.rbenv
 github sstephenson/ruby-build ~/.rbenv/plugins/ruby-build
 
 put rbenv.zsh ~/.oh-my-zsh/custom/
-put .gemrc ~
+put gemrc ~/.gemrc
 
 if check_command "apt-get"; then
   if ! dpkg -l $DEPENDENCIES > /dev/null; then

@@ -19,5 +19,5 @@ for file in custom/*; do
 done
 
 put themes/cromega.zsh-theme ~/.oh-my-zsh/themes
-put .zshrc ~
+put zshrc ~/.zshrc
 

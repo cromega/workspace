@@ -1,5 +1,5 @@
 cd $(dirname $0)
 . ../lib.sh
 
-put .tmux.conf ~
+put tmux.conf ~/.tmux.conf
 
