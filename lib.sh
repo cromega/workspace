@@ -8,12 +8,18 @@ prepare_environment() {
 }
 
 put() {
-  file="$1"
-  path="$2"
+  src="$1"
+  dst="$2"
 
-  mkdir -p "$path"
-  cp "$file" "$path"
-  echo "$path/$file written."
+  if [[ "$dst" =~ "/$" ]]; then
+    mkdir -p "$dst"
+    cp $src $dst
+    echo "$dst/$src written."
+  else
+    mkdir -p "$(dirname $dst)"
+    cp $src $dst
+    echo "$dst written."
+  fi
 }
 
 symlink() {
