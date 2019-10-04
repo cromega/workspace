@@ -11,7 +11,7 @@ put() {
   src="$1"
   dst="$2"
 
-  if [[ "$dst" =~ "/$" ]]; then
+  if [[ "$dst" =~ /$ ]]; then
     mkdir -p "$dst"
     cp $src $dst
   else
