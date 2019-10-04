@@ -1,7 +1,7 @@
 cd $(dirname $0)
 . ../lib.sh
 
-DEPENDENCIES="autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm3 libgdbm-dev"
+DEPENDENCIES="autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm5 libgdbm-dev"
 
 github sstephenson/rbenv ~/.rbenv
 github sstephenson/ruby-build ~/.rbenv/plugins/ruby-build
