@@ -14,12 +14,12 @@ put() {
   if [[ "$dst" =~ "/$" ]]; then
     mkdir -p "$dst"
     cp $src $dst
-    echo "$dst/$src written."
   else
     mkdir -p "$(dirname $dst)"
     cp $src $dst
-    echo "$dst written."
   fi
+
+  echo "$dst/$src" written.
 }
 
 symlink() {
