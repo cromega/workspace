@@ -14,7 +14,8 @@
   st = status
   b = branch
   f = !git fetch && git status
-  lg = "!_fn() { git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -n ${1:--1}; }; _fn"
+  lg = "!_fn() { git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative -n ${1:--1} $2; }; _fn"
+
 
 [core]
   pager = "less -FRX"
