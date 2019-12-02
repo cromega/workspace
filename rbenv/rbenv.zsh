@@ -11,3 +11,4 @@ stubonce rbenv loadrbenv
 stubonce ruby loadrbenv
 stubonce bundle loadrbenv
 stubonce irb loadrbenv
+stubonce rerun loadrbenv
