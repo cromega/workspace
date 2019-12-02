@@ -22,3 +22,5 @@ unsetopt autocd
 alias shrug='echo ¯\\_\(ツ\)_/¯'
 
 [ ${aliases[g]} ] && unalias g
+
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=13
