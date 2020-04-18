@@ -6,8 +6,8 @@ if [ ! -d ~/.oh-my-zsh ]; then
   github robbyrussell/oh-my-zsh ~/.oh-my-zsh
 fi
 
-github zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/
-github zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/
+github zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/
+github zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/
 
 if [ ! -x /usr/bin/zsh ]; then
   if check_command "apt-get"; then
