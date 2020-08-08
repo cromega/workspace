@@ -2,7 +2,7 @@
 [ -S /var/run/user/$UID/keyring/ssh ] && return # Cinnamon
 
 start_new_agent() {
-  find /tmp -type d -iname 'ssh*' -exec rm -rf {} \;
+  find /tmp -type d -iname 'ssh*' | xargs rm -rf
   eval $(ssh-agent) > /dev/null
 }
 
