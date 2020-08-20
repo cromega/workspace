@@ -2,7 +2,7 @@
 [ -S /var/run/user/$UID/keyring/ssh ] && return # Cinnamon
 
 start_new_agent() {
-  find /tmp -type d -iname 'ssh*' | xargs rm -rf
+  find /tmp -maxdepth 1 -type d -iname 'ssh*' | xargs rm -rf
   eval $(ssh-agent) > /dev/null
 }
 
@@ -12,7 +12,7 @@ if [ -z $pid ]; then
   return
 fi
 
-socket=$(find /tmp -type s | grep "ssh.*agent.$(($pid - 1))")
+socket=$(find /tmp -type s 2>&1 | grep "ssh.*agent.$(($pid - 1))")
 if [ -z $socket ]; then
   start_new_agent
   return
