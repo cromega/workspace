@@ -13,4 +13,4 @@ export MAKE_OPTS="-j$(($(grep -c MHz /proc/cpuinfo) + 1))"
 #stubonce irb loadrbenv
 #stubonce rerun loadrbenv
 
-#_evalcache rbenv init - zsh
+_evalcache rbenv init - zsh
