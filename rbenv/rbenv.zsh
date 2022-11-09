@@ -1,6 +1,9 @@
 source ${0:a:h}/utils.zsh
 export PATH="${HOME}/.rbenv/bin:$PATH"
-export MAKE_OPTS="-j$(($(grep -c MHz /proc/cpuinfo) + 1))"
+
+cores=$(grep -c MHz /proc/cpuinfo)
+jobs=$((cores>4 ? 4 : cores + 1))
+export MAKE_OPTS="-j$jobs"
 
 # loadrbenv() {
 #   eval "$(rbenv init - zsh)"
