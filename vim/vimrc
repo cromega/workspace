@@ -83,6 +83,7 @@ nnoremap <c-\> :NERDTreeToggle<cr>
 nnoremap <c-n> :bn<cr>
 nnoremap <c-p> :bp<cr>
 nnoremap <c-y> :%w !xclip -selection clipboard<cr><cr>
+nnoremap <space> :bn<cr>
 vnoremap <c-y> :'<,'>w !xclip -selection clipboard<cr><cr>
 map <c-_> <plug>NERDCommenterToggle
 
